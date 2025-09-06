@@ -351,5 +351,18 @@
  alert('ایجاد پروژه جدید');
  });
  </script>
-</body>
+</body> 
+<script>
+// اضافه کردن تعامل به دکمه‌ها
+document.querySelectorAll('.project-card').forEach(card => {
+card.addEventListener('click', function() {
+alert('پروژه انتخاب شد: ' + this.querySelector('.project-title').textContent);
+});
+});
+
+document.querySelector('.btn-create').addEventListener('click', function(e) {
+e.preventDefault();
+alert('ایجاد پروژه جدید');
+});
+</script>
 </html>
